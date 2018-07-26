@@ -1,0 +1,47 @@
+@(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Jumbo_Printer</title>
+        <link type="text/css" rel="stylesheet" href="/assets/stylesheets/bootstrap337/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    </head>
+    <body style="font-family: 'Kanit', sans-serif;">
+        <div class="container-fluid " id="head">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-sm-3">
+                        @head_name()
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                     <div class="col-sm-12" id="color_menu">
+                        @t_menu()
+                     </div>
+            </div>
+        </div>
+        <div class="container" id="content">
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+                    @menu_v()
+                </div>
+                <div class="col-sm-9">
+                    @content
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                @Location()
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

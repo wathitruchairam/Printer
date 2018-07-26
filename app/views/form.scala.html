@@ -1,0 +1,33 @@
+<div class="col-lg-6">
+<form action="/post" method="post">
+     รหัสสินค้า:<br>
+    <input class="form-control" type="text" name="pid">
+    <br>
+    ยี่ห้อสินค้า:<br>
+    <input class="form-control" type="text" name="pname" >
+    <br>
+         รุ่นสินค้า:<br>
+         <input class="form-control" type="text" name="pbrane">
+         <br>
+
+    ประเภทสินค้า:<br>
+    <select class="form-control" name="ptype">
+        <option value="Inkjet">เครื่องพิมพ์แบบพ่นหมึก</option>
+        <option value="Laser">เครื่องพิมพ์เลเซอร์</option>
+        <option value="Plotter">พล็อตเตอร์</option>
+    </select>
+    <br>
+    รายละเอียดสินค้า:<br>
+    <textarea class="form-control" rows="10" cols="50" name="pdetail"></textarea>
+    <br>
+    จำนวน:<br>
+    <input class="form-control" type="text" name="pamount">
+    <br>
+    ราคา:<br>
+    <input class="form-control" type="text" name="pprice">
+    <br>
+<br>
+    <input type="submit" value="บันทึก" class="btn btn-success">
+
+</form>
+</div>
