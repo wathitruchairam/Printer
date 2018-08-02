@@ -1,5 +1,6 @@
 package controllers;
 
+import models.printer;
 import models.showpro;
 import play.*;
 import play.api.templates.Html;
@@ -10,7 +11,9 @@ import play.mvc.*;
 import views.html.*;
 
 public class Application extends Controller {
-    
+    public static printer printer;
+    public Form<printer> printerForm = Form.form(printer.class);
+
     public static Result main(Html content) {
         return ok(main.render(content));
     }
@@ -56,8 +59,21 @@ public class Application extends Controller {
         detail = myForm.get("pdetail");
         amount = Double.parseDouble( myForm.get("pamount"));
         price = Double.parseDouble( myForm.get("pprice"));
-    return ok(p_post.render(id,name,brand,Ptype,detail,amount,price));
+        printer = new printer(price,amount,id,name,brand,Ptype,detail);
+        /*printer.setId(id);
+        printer.setName(name);
+        printer.setBrand(brand);
+        printer.setType(Ptype);
+        printer.setDetail(detail);
+        printer.setAmount(amount);
+        printer.setPrice(price); */
+    return ok(p_post.render(printer));
     }
 
-
+    public static Result printer_form_helper(){
+        return ok();
+    }
+    public static Result printer_post_helper(){
+        return ok();
+    }
 }

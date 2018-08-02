@@ -1,4 +1,4 @@
-@(id:String,name:String,brane:String,ptype:String,detail:String,amount:Double,price:Double)
+@(printer:printer)
 
 <html>
     <head>
@@ -31,32 +31,15 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>@id</td>
-                                        <td>@name</td>
-                                        <td>@brane</td>
-                                        <td>@ptype</td>
-                                        <td>@detail</td>
-                                        <td>@amount</td>
-                                        <td>@price</td>
+                                        <td>@printer.getId</td>
+                                        <td>@printer.getName</td>
+                                        <td>@printer.getBrand</td>
+                                        <td>@printer.getType</td>
+                                        <td>@printer.getDetail</td>
+                                        <td>@printer.getAmount</td>
+                                        <td>@printer.getPrice</td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>fat</td>
-                                        <td>jj</td>
-                                        <td>gg</td>
-                                        <td>gg</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>twitter</td>
-                                        <td>jj</td>
-                                        <td>gg</td>
-                                        <td>gg</td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>

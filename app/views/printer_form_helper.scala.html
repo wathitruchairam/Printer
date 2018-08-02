@@ -1,0 +1,22 @@
+@(myForm:Form[printer])
+@import helper._;
+
+    <html>
+        <head>
+            <title>gfsgs</title>
+        </head>
+        <body>
+            @helper.form(action = routes.Application.printer_post_helper(), 'class->"from-control"){
+
+                @inputText(myForm("id"),'_label ->"รหัสหนังสือ", 'size-> "50", 'maxlength->"40", 'required->"requied")
+                @inputText(myForm("name"),'_label ->"ยี่ห้อ", 'size-> "50", 'maxlength->"40", 'required->"requied")
+                @inputText(myForm("brand"),'_label ->"รุ่น", 'size-> "50")
+                @select(myForm("type"), options=Seq("เครื่องพิมพ์แบบพ่นหมึก"->"เครื่องพิมพ์แบบพ่นหมึก",))
+                @inputText(myForm("detail"),'_label ->"รายละเอียด", 'size->"50"))
+                @inputText(myForm("amount"),'_label ->"จำนวน", 'size->"50"))
+                @inputText(myForm("price"),'_label ->"ราคา", 'size->"50"))
+                <input type="submit" value="ok" class="btn-success">
+                <input type="reset" value="cencel" class="btn-default">
+            }
+        </body>
+    </html>
